@@ -1,0 +1,57 @@
+<html>
+<body>
+
+<p>The webscraping-package enables the quick programmatic extraction of information from HTML-pages.</p>
+
+<h2>Package Specification</h2>
+
+<h3>Current State</h3>
+
+<p>The current state is that of a usable alpha version. In that respect, the webscraper is not
+yet feature complete, but can already be used (at your own risk, of course).</p>
+
+<h3>Typical Usage</h3>
+
+<p>Some examples for usage can be found in the JUnit test-cases. These can be found under /test/.../</p>
+
+<p>It is expected that Simple-Scrape is used in a programmatic way like this:</p>
+<ol>
+	<li><strong>Acquire the content of a webpage.</strong><br>
+	This can be done in any way the programmer sees fit.
+	In simple cases and for testing the methods in HTTPHelper can be of use to acquire the contents.</li>
+	<li><strong>Feed InputStream to Scraper</strong><br>
+	The simplest way to do this is by instantiating a new Scraper with<br>
+	<tt>new Scraper(<your InputStream here>)</tt><br>
+	The InputStream will be read completely and can be closed afterwards if necessary.</li>
+	<li><strong>Search and retrieve content</strong><br>
+	Use the scrapers <tt>indexOf</tt> and <tt>searchTokens</tt> methods to look for specific
+	parts of the file. A couple of methods exist for retrieving tokens.</li>
+</ol>
+
+<h3>Requirements</h3>
+
+<ul>
+	<li>Java 1.5 or higher</li>
+	<li>Log4J (tested with version 1.2.8)<br>
+	Log4J can be obtained from <a href="http://logging.apache.org/log4j/docs/">http://logging.apache.org/log4j/docs/</a></li>
+	<li>For unit testing: JUnit 4<br>
+	JUnit 4 is alredays installed if you have Eclipse 3.2 or higher</li>
+</ul>
+<p>This project was developed using Eclipse 3.2 and the files .project and .classpath reflect that origin.</p>
+
+<h3>Suggestions for enhancements</h3>
+
+<ul>
+	<li>More support for using forms</li>
+	<li>More search capabilities:</li>
+	<ul>
+		<li>Different searchoptions per search element</li>
+		<li>Support for XPath(-like) expressions</li>
+	</ul>
+	<li>Graphical developer support: Point-and-Click-construction of complex dialogs across multiple pages</li>
+	<li>(Semi-)automatic support for creating Web-Services (REST and SOAP) for scraped results (in and out support!)</li>
+	<li>Make it thread-safe</li>
+	<li>Cookie-Support</li>
+</ul>
+</body>
+</html>
